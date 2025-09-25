@@ -7,22 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Flashcard Quiz App</h1>
-    <div class="flashcard-container">
-        <div class="flashcard" id="flashcard">
-            <div class="flashcard-front">
-                <p id="question">Question goes here.</p>
-            </div>
-            <div class="flashcard-back">
-                <p id="answer">Answer goes here.</p>
+    <div class="container">
+        <h1>Flashcard Quiz App</h1>
+        
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-front">
+                    <p id="question">Question goes here.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p id="answer">Answer goes here.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="controls">
-        <button id="prevBtn">Previous</button>
-        <button id="showAnswerBtn">Show Answer</button>
-        <button id="nextBtn">Next</button>
+        <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="showAnswerBtn">Show Answer</button>
+            <button id="nextBtn">Next</button>
+        </div>
+
+        <div class="card-manager">
+            <button id="addCardBtn" class="action-btn">Add New Card</button>
+            <button id="editCardBtn" class="action-btn">Edit Current Card</button>
+            <button id="deleteCardBtn" class="action-btn">Delete Current Card</button>
+        </div>
+
+        <div id="cardForm" class="card-form hidden">
+            <h2 id="formTitle">Add New Flashcard</h2>
+            <form id="flashcardForm">
+                <div class="form-group">
+                    <label for="questionInput">Question:</label>
+                    <textarea id="questionInput" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="answerInput">Answer:</label>
+                    <textarea id="answerInput" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="action-btn">Save</button>
+                    <button type="button" id="cancelBtn" class="action-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
